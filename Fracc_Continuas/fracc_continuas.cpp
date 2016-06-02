@@ -5,34 +5,32 @@
 int main()
 {
 
-	
-	int i = 0;
-	float valores[4];
-	int contador = 0;
-	float resul = 0;
 
-	while (contador != 4) {
-		printf("Introduce el valor de los numeros a sumar: ");
-		scanf("%f", &valores[i]);
-		contador++;
+	int i = 0;
+	double values[4];
+	int count = 0;
+	double result = 0;
+	double result2 = 0;
+
+	while (count != 4) {
+		printf("Enter numbers: ");
+		scanf("%lf", &values[i]);
+		count++;
 		i++;
 	}
 
-	
+	/*printf("\nYou have entered %i numbers\n", count);                   //Descomentar para que se imprima el proceso
+	for (int i = count; i > 0; i--) {
+	printf("\nThe value of N is: %.2lf\n", values[i-1]);
+	}*/
+	for (int k = count - 1; k > 1; k--) {
+		result = values[k - 1] + 1 / (values[k]);
+		for (int j = count - 1; j > 0; j--) {
+			result2 = values[j - 1] + 1 / result;
+		}
 
-	printf("\nHas introducido %i numeros\n", contador);
-	for (int i = contador; i > 0; i--) {
-		printf("\nEl valor de N es: %f\n", valores[i-1]);	
 	}
-	for (int k = contador-1; k > 0; k--) {
-		resul = valores[k - 1] + 1 / (valores[k]);
-	printf("\nOperacion%i:\t%f\n\n", k, resul);
-		
-	}
-	
-	
-	
-	
-    return 0;
+	printf("\nResult:\t%.2lf\n\n", result2);
+
+	return 0;
 }
-
