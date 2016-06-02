@@ -26,7 +26,7 @@ int main()
 	}
 	for (int k = contador-1; k > 0; k--) {
 		resul = valores[k - 1] + 1 / (valores[k]);
-	printf("\nOperacion%i%:\t%f\n\n", k, resul);
+	printf("\nOperacion%i:\t%f\n\n", k, resul);
 		
 	}
 	
