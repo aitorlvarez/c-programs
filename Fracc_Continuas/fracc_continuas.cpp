@@ -19,7 +19,7 @@ int main()
 		i++;
 	}
 
-	/*printf("\nYou have entered %i numbers\n", count);                   //Descomentar para que se imprima el proceso
+	/*printf("\nYou have entered %i numbers\n", count);                   //Uncomment to printf more details
 	for (int i = count; i > 0; i--) {
 	printf("\nThe value of N is: %.2lf\n", values[i-1]);
 	}*/
