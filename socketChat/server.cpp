@@ -23,11 +23,11 @@ int main(int argc, const char *argv[])
 
 	//1. Creacion del socket
 
-	client = socket(AF_INET, SOCK_STREAM, 0); //AF_INET hace referencia a direccin IP
+	client = socket(AF_INET, SOCK_STREAM, 0); //AF_INET hace referencia a direccion IP
 
 
 
-	if (client < 0)//En caso de que no pueda crearse devolver -1 y se acabar el programa.
+	if (client < 0)//En caso de que no pueda crearse devolvera -1 y se acabar el programa.
 	{
 
 		printf("\nError creando el shocket..");
@@ -38,7 +38,7 @@ int main(int argc, const char *argv[])
 	printf("\nEl shocket ha sido creado.\n");
 
 
-	server_addr.sin_family = AF_INET; //tipo de direccin
+	server_addr.sin_family = AF_INET; //tipo de direccion
 	server_addr.sin_addr.s_addr = htons(INADDR_ANY); //INADDR_ANY es la IP del host/ordenador que corre el programa
 	server_addr.sin_port = htons(Nport); //htons convierte el numero de puerto a orden de bytes de red.
 
@@ -47,7 +47,7 @@ int main(int argc, const char *argv[])
 
 
 	int tryBind = bind(client, (struct sockaddr*)&server_addr,sizeof(server_addr));
-	if (tryBind < 0) //En caso de fallo, devolver -1
+	if (tryBind < 0) //En caso de fallo, devolvera -1
 	{
 
 		printf("Error. Este shocket ya esta en uso..");
@@ -80,7 +80,7 @@ int main(int argc, const char *argv[])
 		printf("Conectado con el usuario!");
 		printf("\nRecuerda poner & para terminar la conexion.\n"); //Escribir & para poner a true goOut y salir del bucle 
 
-		//4. Bucle que se repite hasta que goOut sea true 
+	//4. Bucle que se repite hasta que goOut sea true 
 
 		printf("Usuario: ");
 		do {
@@ -112,6 +112,7 @@ int main(int argc, const char *argv[])
 			do {
 				recv(server, buffer, bffSize, 0);
 				printf("%s", buffer);
+				printf(" ");
 				if (*buffer == '&') {
 					*buffer = '*';
 					goOut = true;
@@ -121,7 +122,7 @@ int main(int argc, const char *argv[])
 		} while (!goOut);
 
 
-		//5. goOut = true, cerramos la conexin
+		//5. goOut = true, cerramos la conexion
 
 		printf("\n\nConexion terminada.");
 		close(server);
