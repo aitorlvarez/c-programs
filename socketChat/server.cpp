@@ -21,7 +21,7 @@ int main(int argc, const char *argv[])
 	struct sockaddr_in server_addr; //contiene la direccion del server
 	socklen_t size;
 
-	//1. Creacin del socket
+	//1. Creacion del socket
 
 	client = socket(AF_INET, SOCK_STREAM, 0); //AF_INET hace referencia a direccin IP
 
