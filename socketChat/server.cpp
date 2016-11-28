@@ -122,7 +122,7 @@ int main(int argc, const char *argv[])
 		} while (!goOut);
 
 
-		//5. goOut = true, cerramos la conexion
+	//5. goOut = true, cerramos la conexion
 
 		printf("\n\nConexion terminada.");
 		close(server);
