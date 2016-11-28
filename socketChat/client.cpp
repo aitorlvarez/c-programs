@@ -20,7 +20,7 @@ int main(int argc, const char *argv[])
 	struct sockaddr_in server_addr;
 
 
-	//Creacin del socket 
+	//Creacion del socket 
 
 	client = socket(AF_INET, SOCK_STREAM, 0);
 
@@ -38,11 +38,11 @@ int main(int argc, const char *argv[])
 	server_addr.sin_family = AF_INET;
 	server_addr.sin_port = htons(port);
 
-	//Conexin
+	//Conexion
 
 	int connection = connect(client,(struct sockaddr *)&server_addr, sizeof(server_addr));
 
-	if (connection == 0)  //En caso de fallo no devolver 0, sino -1
+	if (connection == 0)  //En caso de fallo no devolvera 0, sino -1
 
 		printf("Conectado por el puerto %i", port);
 
