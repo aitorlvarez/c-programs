@@ -86,6 +86,7 @@ int main(int argc, const char *argv[])
 		do {
 			recv(server, buffer, bffSize, 0); //recibe el mensaje almacenado en el buffer
 			printf("%s", buffer);
+			printf(" ");
 			if (*buffer == '&') {
 				*buffer = '*';
 				goOut = true;
@@ -101,10 +102,10 @@ int main(int argc, const char *argv[])
 				send(server, buffer, bffSize, 0); //y lo envia al otro usuario
 				if (*buffer == '&') {
 					send(server, buffer, bffSize, 0);
-					*buffer = '&';
+					*buffer = '*';
 					goOut = true;
 				}
-			} while (*buffer != '&');
+			} while (*buffer != '*');
 
 
 			printf("Usuario: ");
