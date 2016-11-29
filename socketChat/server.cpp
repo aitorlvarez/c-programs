@@ -118,7 +118,7 @@ int main(int argc, const char *argv[])
 					goOut = true;
 				}
 
-			} while (*buffer != '&');
+			} while (*buffer != '*');
 		} while (!goOut);
 
 
