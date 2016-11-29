@@ -27,7 +27,7 @@ int main(int argc, const char *argv[])
 
 
 
-	if (client < 0)//En caso de que no pueda crearse devolvera -1 y se acabar el programa.
+	if (client < 0)//En caso de que no pueda crearse devolvera -1 y se acabara el programa.
 	{
 
 		printf("\nError creando el shocket..");
